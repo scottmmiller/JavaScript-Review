@@ -61,11 +61,15 @@ seeker();
 
 
 
-//Create a copy of first and save it into second. Then, add 6 and 7 to the end of second. When you run this, first should be just [1,2,3,4,5] and second will be [1,2,3,4,5,6,7] if you created your copy correctly.
+//Create a copy of first and save it into second. Then, add 6 and 7 to the end of second.
+// When you run this, first should be just [1,2,3,4,5] and second will be [1,2,3,4,5,6,7]
+// if you created your copy correctly.
 var first = [1,2,3,4,5];
-var second;
+var second = [];
 
   //code here
+second.push(first.slice(0, 6), 6, 7);
+
 
 alert(first) //[1,2,3,4,5];
 alert(second) //[1,2,3,4,5,6,7];
@@ -76,11 +80,23 @@ alert(second) //[1,2,3,4,5,6,7];
 
 
 
-//write a function called longest that takes in our sentence variable, and returns the longest word in that sentence.
+//write a function called longest that takes in our sentence variable, and returns the longest
+// word in that sentence.
 var sentence = "Dev Mountain is the best"
 
   //code here
+var longest = function () {
+	var sentArr = sentence.split(' ');
+	var longWord = 'm';
+	for (var i = 0; i < sentArr.length; i++) {
+		if (sentArr[i].length > longWord.length) {
+			longWord = sentArr[i];
+		};
+	};
+	return longWord;
+};
 
+longest();
 
 /* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */
 
