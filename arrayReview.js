@@ -125,4 +125,21 @@ var capitalize = function () {
 
 
 var theOdyssey = "function expression or function declaration? Tis an obvious choice";
-//Write a function called vowelCounter that takes in a string (theOdyssey) and returns how many vowels are in that string.
+//Write a function called vowelCounter that takes in a string (theOdyssey) and returns how many
+// vowels are in that string.
+
+var vowelCounter = function () {
+	var stringArr = theOdyssey.split('');
+	var vowels = [];
+	for (var i = 0; i < stringArr.length; i++) {
+		if (stringArr[i] === 'a' || stringArr[i] === 'A'
+			|| stringArr[i] === 'e' || stringArr[i] === 'E'
+			|| stringArr[i] === 'i' || stringArr[i] === 'I'
+			|| stringArr[i] === 'o' || stringArr[i] === 'O'
+			|| stringArr[i] === 'u' || stringArr[i] === 'U') {
+			vowels.push(stringArr[i]);
+		};
+		console.log(vowels);
+	};
+	return vowels.length;
+};
