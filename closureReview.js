@@ -17,8 +17,40 @@ calling('435-215-9248');
 
 /*
 
-Write a function that accepts a function as it's only argument and returns a new function (which calls the original function that was passed in) that can only ever be executed once.
+Write a function that accepts a function as it's only argument and returns a new function (which
+calls the original function that was passed in) that can only ever be executed once.
 
-Once completed, add a second arguments that allows the function to be executed N number of times. After the function has been called N number of times, console.log('STAHHP');
+Once completed, add a second argument that allows the function to be executed N number of times. After
+the function has been called N number of times, console.log('STAHHP');
 
 */
+var outerFn = function (fn) {
+	return function(){
+		return fn());
+	};
+};
+var add = function() {
+	return 4 + 5;
+};
+
+var test = outerFn(add);
+test();
+
+
+var outerFn = function (n, fn) {
+	return function(){
+		if (n > 0) {
+			n--;
+			return fn();
+		}
+		else {
+			console.log('STAHHP');
+		};
+	};
+};
+var add = function() {
+	return 4 + 5;
+};
+
+var test = outerFn(add);
+test();
