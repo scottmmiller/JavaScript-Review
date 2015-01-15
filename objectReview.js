@@ -52,7 +52,11 @@ var user = {
 //If it's not truthy, remove it from the object. hint: 'delete'.
 
   //Your code here
-
+for (var key in user) {
+  if (!user[key]) {
+    delete user[key];
+  };
+};
 
 
 //Once you get your truthy object, Change the remaining values in the object to be specific to you
