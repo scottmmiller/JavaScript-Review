@@ -31,16 +31,22 @@ last(names, function(lastName){
 
 //have the 'contains' function return a boolean value if the name is in the array or not.
 
+var contains = function (name, arr, callback) {
+  var answer = false;
+  if (arr.indexOf(name) !== -1) {
+    answer = true;
+  };
+  callback(name, answer);
+};
 
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
-contains('Colt', names, function(yes){
+contains('Colt', names, function(name, yes){
   if(yes){
-    console.log('Colt is in the array');
+    console.log(name + ' is in the array');
   } else {
-    console.log('Colt is not in the list');
-  }
+    console.log(name + ' is not in the list');
+  };
 });
-
 
 
 
