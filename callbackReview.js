@@ -52,7 +52,13 @@ contains('Colt', names, function(name, yes){
 
 /* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */
 
-
+var map = function (arr, callback) {
+  var num = 0;
+  for (var i = 0; i < arr.length; i++) {
+    num = arr[i];
+  };
+  callback(num);
+};
 
 
 var numbers = [1,2,3,4,5];
@@ -66,7 +72,15 @@ map(numbers, function(num){
 
 /* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */
 
-
+var uniq = function (arr, callback) {
+	var uniqArr = [];
+	for (var i = 0; i < arr.length; i++) {
+		if (uniqArr.indexOf(arr[i]) === -1) {
+			uniqArr.push(arr[i]);
+		};
+	};
+	callback(uniqArr);
+};
 
 
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
@@ -79,12 +93,18 @@ uniq(names, function(uniqArr){
 
 /* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */
 
-
+var each = function (arr, callback) {
+	for (var i = 0; i < arr.length; i++) {
+		item = arr[i];
+		indice = i;
+		callback(item, indice);
+	};
+};
 
 
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
 each(names, function(item, indice){
-  console.log('The item in the ' + indice + 'position is ' + item)
+  console.log('The item in the ' + indice + ' position is ' + item)
 });
 
 
