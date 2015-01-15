@@ -53,11 +53,11 @@ contains('Colt', names, function(name, yes){
 /* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */
 
 var map = function (arr, callback) {
-  var num = 0;
+  var newArr = [];
   for (var i = 0; i < arr.length; i++) {
-    num = arr[i];
+    newArr.push(callback(arr[i]));
   };
-  callback(num);
+  return newArr;
 };
 
 
@@ -85,7 +85,7 @@ var uniq = function (arr, callback) {
 
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
 uniq(names, function(uniqArr){
-  console.log('The new names array with all the duplicate items removed is ', uniqArr);
+  console.log('The new names arraygtiwith all the duplicate items removed is ', uniqArr);
 });
 
 
@@ -111,7 +111,7 @@ each(names, function(item, indice){
 
 
 /* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */
-
+var getUserById = function (id, arr, )
 
 
 
