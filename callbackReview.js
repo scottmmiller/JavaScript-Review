@@ -149,7 +149,13 @@ getUserById('16t', users, function(id, user){
 
 
 /* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */
-
+var find = function (arr, callback) {
+	for (var i = 0; i < arr.length; i++) {
+		if (callback(arr[i])){
+			return arr[i];
+		};
+	};
+};
 
 
 
@@ -157,4 +163,4 @@ getUserById('16t', users, function(id, user){
 var numbers  = [1, 2, 3, 4, 5, 6];
 find(numbers, function(num){ 
   return num % 2 == 0; //should return 2
-})
+});
