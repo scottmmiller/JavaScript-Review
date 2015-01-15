@@ -85,7 +85,7 @@ var uniq = function (arr, callback) {
 
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
 uniq(names, function(uniqArr){
-  console.log('The new names arraygtiwith all the duplicate items removed is ', uniqArr);
+  console.log('The new names array with all the duplicate items removed is ', uniqArr);
 });
 
 
@@ -111,7 +111,13 @@ each(names, function(item, indice){
 
 
 /* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */
-var getUserById = function (id, arr, )
+var getUserById = function (id, arr, callback) {
+	for (var i = 0; i < arr.length; i++) {
+		if (arr[i].id === id) {
+			callback(id, arr[i]);
+		};
+	};
+};
 
 
 
@@ -135,8 +141,8 @@ var users = [
     address: '192 East 32 North'
   },
 ];
-getUserById('16t', users, function(user){
-  console.log('The user with the id 16t has the email of ' + user.email + 'the name of ' + user.name + ' and the address of ' + user.address); 
+getUserById('16t', users, function(id, user){
+  console.log('The user with the id of ' + id + ' has the email of ' + user.email + ' the name of ' + user.name + ' and the address of ' + user.address); 
 });
 
 
